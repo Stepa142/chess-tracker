@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess Score Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Chess Score Tracker</h1>
+        
+        <div class="score-cards">
+            <div class="player-card">
+                <h2>Chajvy</h2>
+                <p>Wins: <span id="chajvy-wins">0</span></p>
+                <p>Win Rate: <span id="chajvy-rate">0</span>%</p>
+                <button onclick="addWin('chajvy')">Add Win</button>
+            </div>
+            
+            <div class="player-card">
+                <h2>Timy</h2>
+                <p>Wins: <span id="timy-wins">0</span></p>
+                <p>Win Rate: <span id="timy-rate">0</span>%</p>
+                <button onclick="addWin('timy')">Add Win</button>
+            </div>
+        </div>
+
+        <div class="chart-container">
+            <canvas id="winChart"></canvas>
+        </div>
+
+        <div class="stats-container">
+            <h2>Game Statistics</h2>
+            <p>Total Games: <span id="total-games">0</span></p>
+            <button onclick="resetStats()">Reset Stats</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
